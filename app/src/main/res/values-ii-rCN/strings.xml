@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">姓名</string>
+    <string name="title_home">描述</string>
+    <string name="title_dashboard">别的东西</string>
+    <string name="title_notifications">进步</string>
+
+    <string name="user_title">进步</string>
+    <string name="learning_title">进</string>
+    <string name="courses_title">进进</string>
+</resources>

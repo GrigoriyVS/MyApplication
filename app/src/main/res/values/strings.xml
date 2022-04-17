@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">En</string>
+    <string name="title_home">En</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="user_title">user</string>
+    <string name="learning_title">learning</string>
+    <string name="courses_title">courses</string>
+
+</resources>
