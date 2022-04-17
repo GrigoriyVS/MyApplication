@@ -7,84 +7,142 @@
         android:layout_height="match_parent"
         tools:context=".ui.dashboard.DashboardFragment">
 
-    <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp" android:id="@+id/levelBt1"
-            android:scaleType="fitCenter"
-            android:background="@drawable/level_1"
-            android:soundEffectsEnabled="false"
-            tools:ignore="SpeakableTextPresentCheck"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="156dp"
-            app:layout_constraintTop_toBottomOf="@+id/textView"/>
-    <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp" android:id="@+id/levelBt2"
-            android:scaleType="fitCenter"
-            android:background="@drawable/level_2"
-            android:soundEffectsEnabled="false"
-            tools:ignore="SpeakableTextPresentCheck"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="156dp"
-            app:layout_constraintTop_toBottomOf="@+id/levelBt1" android:layout_marginTop="60dp"/>
-    <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp" android:id="@+id/levelBt3"
-            android:scaleType="fitCenter"
-            android:background="@drawable/level_3"
-            android:soundEffectsEnabled="false"
-            tools:ignore="SpeakableTextPresentCheck"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="156dp"
-            app:layout_constraintTop_toBottomOf="@+id/levelBt2" android:layout_marginTop="60dp"/>
-    <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp" android:id="@+id/levelBt4"
-            android:scaleType="fitCenter"
-            android:background="@drawable/level_4"
-            android:soundEffectsEnabled="false"
-            tools:ignore="SpeakableTextPresentCheck"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="156dp"
-            app:layout_constraintTop_toBottomOf="@+id/levelBt3" android:layout_marginTop="60dp"/>
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="56dp" android:id="@+id/textView"
+            android:fontFamily="casual" android:textSize="20sp"
+            android:textColor="@color/black" android:textAlignment="center" android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent" android:background="@drawable/borders"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.6" app:layout_constraintStart_toStartOf="parent"
+            android:singleLine="false"
+            android:layout_marginTop="-15dp" android:layout_marginStart="70dp" android:layout_marginEnd="70dp"/>
     <TextView
             android:text="@string/learning_title"
-            android:layout_width="408dp"
-            android:layout_height="30dp" android:id="@+id/textView"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.333" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="16dp" android:fontFamily="casual" android:textSize="20sp"
-            android:textColor="@color/black" android:textAlignment="center" android:textStyle="bold"/>
-    <TextView
-            android:text="@string/LevelName_1"
-            android:layout_width="408dp"
-            android:layout_height="30dp" android:id="@+id/textLevelBt1"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            android:layout_width="match_parent"
+            android:layout_height="32dp" android:id="@+id/textView4"
             android:fontFamily="casual" android:textSize="20sp"
             android:textColor="@color/black" android:textAlignment="center" android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/levelBt1"/>
-    <TextView
-            android:text="@string/LevelName_2"
-            android:layout_width="408dp"
-            android:layout_height="30dp" android:id="@+id/textLevelBt"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.333"
-            android:fontFamily="casual" android:textSize="20sp"
-            android:textColor="@color/black" android:textAlignment="center" android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/levelBt2"/>
-    <TextView
-            android:text="@string/LevelName_3"
-            android:layout_width="408dp"
-            android:layout_height="30dp" android:id="@+id/textLevelBt2"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.333"
-            android:fontFamily="casual" android:textSize="20sp"
-            android:textColor="@color/black" android:textAlignment="center" android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/levelBt3"/>
-    <TextView
-            android:text="@string/LevelName_4"
-            android:layout_width="408dp"
-            android:layout_height="30dp" android:id="@+id/textLevelBt3"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.333"
-            android:fontFamily="casual" android:textSize="20sp"
-            android:textColor="@color/black" android:textAlignment="center" android:textStyle="bold"
-            app:layout_constraintTop_toBottomOf="@+id/levelBt4"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"/>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            android:id="@+id/scrollView2" app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:fillViewport="true" android:gravity="center">
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="77dp"/>
+            <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" android:id="@+id/levelBt_121"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/level_1"
+                    android:soundEffectsEnabled="false"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    android:layout_marginEnd="@null"
+                    android:layout_gravity="center"/>
+            <TextView
+                    android:text="@string/LevelName_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="59dp" android:id="@+id/textLevelBt6"
+                    android:fontFamily="casual" android:textSize="20sp"
+                    android:textColor="@color/black" android:textAlignment="center" android:textStyle="bold"
+            />
+            <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" android:id="@+id/levelBt_2"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/level_2"
+                    android:soundEffectsEnabled="false"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    android:layout_marginEnd="@null"
+                    android:layout_gravity="center"/>
+            <TextView
+                    android:text="@string/LevelName_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="66dp" android:id="@+id/textLevelBt5"
+                    android:fontFamily="casual" android:textSize="20sp"
+                    android:textColor="@color/black" android:textAlignment="center" android:textStyle="bold"
+            />
+            <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" android:id="@+id/levelBt_3"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/level_3"
+                    android:soundEffectsEnabled="false"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    android:layout_marginEnd="@null"
+                    android:layout_gravity="center"/>
+            <TextView
+                    android:text="@string/LevelName_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="77dp" android:id="@+id/textLevelBt3"
+                    android:fontFamily="casual" android:textSize="20sp"
+                    android:textColor="@color/black" android:textAlignment="center" android:textStyle="bold"
+            />
+            <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" android:id="@+id/levelBt_4"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/level_4"
+                    android:soundEffectsEnabled="false"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    android:layout_marginEnd="@null"
+                    android:layout_gravity="center"/>
+            <TextView
+                    android:text="@string/LevelName_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="76dp" android:id="@+id/textLevelBt2"
+                    android:fontFamily="casual" android:textSize="20sp"
+                    android:textColor="@color/black" android:textAlignment="center" android:textStyle="bold"
+            />
+            <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" android:id="@+id/levelBt6"
+                    android:scaleType="center"
+                    android:background="@drawable/level_4"
+                    android:soundEffectsEnabled="false"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    android:layout_marginEnd="@null"
+                    android:layout_marginTop="@null" android:layout_gravity="center"/>
+            <TextView
+                    android:text="@string/LevelName_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="79dp" android:id="@+id/textLevelBt"
+                    android:fontFamily="casual" android:textSize="20sp"
+                    android:textColor="@color/black" android:textAlignment="center" android:textStyle="bold"
+            />
+            <ImageButton
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" android:id="@+id/levelBt1"
+                    android:scaleType="fitCenter"
+                    android:background="@drawable/level_1"
+                    android:soundEffectsEnabled="false"
+                    tools:ignore="SpeakableTextPresentCheck"
+                    android:layout_marginEnd="@null"
+                    android:layout_gravity="center"/>
+
+            <TextView
+                    android:text="@string/LevelName_4"
+                    android:layout_width="408dp"
+                    android:layout_height="30dp" android:id="@+id/textLevelBt1"
+                    android:fontFamily="casual" android:textSize="20sp"
+                    android:textColor="@color/black" android:textAlignment="center" android:textStyle="bold"
+            />
+            <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="91dp"/>
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

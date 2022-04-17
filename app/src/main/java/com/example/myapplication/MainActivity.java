@@ -1,8 +1,13 @@
 package com.example.myapplication;
 
+import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -10,7 +15,7 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.myapplication.databinding.ActivityMainBinding;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     public static MainActivity mainActivity ;
     private ActivityMainBinding binding;
@@ -26,22 +31,26 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        setFullScreen();
+        //binding.getRoot().findViewById(R.id.levelBt_1);
+        setFullScreen(this);
         setLanguage();
 
+        //ImageButton bt = findViewById(R.id.levelBt_1);
+        //bt.setOnClickListener(this);
         //TODO some
 
+        //startActivity(this, new Intent(this, LearningTests.class));
         setConfig();
     }
 
-    private void setFullScreen(){
-        getSupportActionBar().hide();
+    public static void setFullScreen(AppCompatActivity act){
+        act.getSupportActionBar().hide();
 
-        WindowManager.LayoutParams attrs = getWindow().getAttributes();
+        WindowManager.LayoutParams attrs = act.getWindow().getAttributes();
         attrs.flags = WindowManager.LayoutParams.FLAG_FULLSCREEN;
-        getWindow().setAttributes(attrs);
+        act.getWindow().setAttributes(attrs);
 
-        View decorView = getWindow().getDecorView();
+        View decorView = act.getWindow().getDecorView();
         int uiOptions = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_FULLSCREEN;
         decorView.setSystemUiVisibility(uiOptions);
     }
@@ -58,5 +67,16 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.languageBt: LocaleHelper.changeLocale(); break;
+            case R.id.levelBt_121:
+                Intent intent = new Intent(this, LearningTests.class);
+                startActivity(intent);
+            break;
+        }
     }
 }

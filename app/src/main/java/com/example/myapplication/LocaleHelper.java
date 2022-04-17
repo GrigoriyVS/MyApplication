@@ -30,10 +30,7 @@ public class LocaleHelper {
     public static void setLanguageBt(ImageButton languageBt){
         context = MainActivity.mainActivity;
         langBt = languageBt;
-        langBt.setOnClickListener((View v) -> {
-            LocaleHelper.changeLocale();
-            //new User();
-        });
+        langBt.setOnClickListener(context);
     }
 
     public static void setLocale(Languages newLang) {
