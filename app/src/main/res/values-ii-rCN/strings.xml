@@ -8,4 +8,8 @@
     <string name="user_title">进步</string>
     <string name="learning_title">进</string>
     <string name="courses_title">进进</string>
+    <string name="LevelName_1">一</string>
+    <string name="LevelName_2">二</string>
+    <string name="LevelName_3">三</string>
+    <string name="LevelName_4">四</string>
 </resources>

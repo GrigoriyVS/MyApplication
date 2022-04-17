@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         setFullScreen();
         setLanguage();
 
-        //TODO
+        //TODO some
 
         setConfig();
     }

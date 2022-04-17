@@ -5,12 +5,36 @@ import android.database.sqlite.SQLiteDatabase;
 import static android.content.Context.MODE_PRIVATE;
 
 public class SQLhelper {
-    MainActivity m;
-    SQLiteDatabase db;
+    private static MainActivity m;
+    private static SQLiteDatabase dbUser;
+    private static SQLiteDatabase dbWords;
 
-    public SQLhelper(MainActivity m) {
-        this.m = m;
-        db = m.getBaseContext().openOrCreateDatabase("app.db", MODE_PRIVATE, null);
-        db.execSQL("INSERT OR IGNORE INTO users VALUES ('Tom Smith', 23), ('John Dow', 31);");
+    public static void SetActivity(MainActivity mainActivity){
+        m = mainActivity;
     }
+
+    public static void openOrCreateDatabases(){
+        if(m == null) return;
+        dbUser = m.getBaseContext().openOrCreateDatabase("user.db", MODE_PRIVATE, null);
+        dbWords = m.getBaseContext().openOrCreateDatabase("words.db", MODE_PRIVATE, null);
+    }
+
+    public static void addUser(User user){
+        openOrCreateDatabases();
+        dbUser.execSQL("INSERT OR IGNORE INTO users VALUES ('Tom Smith', 23), ('John Dow', 31);");
+        close();
+    }
+
+    public static void addWord(Word word){
+        openOrCreateDatabases();
+        dbWords.execSQL("INSERT OR IGNORE INTO users VALUES ('Tom Smith', 23), ('John Dow', 31);");
+        close();
+    }
+
+    public static void close(){
+        if(m == null) return;
+        dbUser.close();
+        dbWords.close();
+    }
+
 }

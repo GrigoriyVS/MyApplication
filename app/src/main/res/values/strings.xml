@@ -8,5 +8,9 @@
     <string name="user_title">user</string>
     <string name="learning_title">learning</string>
     <string name="courses_title">courses</string>
+    <string name="LevelName_1">Level1</string>
+    <string name="LevelName_2">2</string>
+    <string name="LevelName_3">3</string>
+    <string name="LevelName_4">4</string>
 
 </resources>
