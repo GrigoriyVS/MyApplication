@@ -20,8 +20,12 @@ public class DashboardFragment extends Fragment {
 
         binding = FragmentLearningBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        ImageButton b = binding.levelBt121;
-        b.setOnClickListener(MainActivity.mainActivity);
+        ImageButton b1 = binding.levelBt1;
+        ImageButton b2 = binding.levelBt2;
+        ImageButton b3 = binding.levelBt3;
+        b1.setOnClickListener(MainActivity.mainActivity);
+        b2.setOnClickListener(MainActivity.mainActivity);
+        b3.setOnClickListener(MainActivity.mainActivity);
          return root;
     }
 

@@ -12,7 +12,9 @@
     <string name="LevelName_2">2</string>
     <string name="LevelName_3">3</string>
     <string name="LevelName_4">4</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="HintText">Hint</string>
+    <string name="BtCheckAnswerText">Check answer</string>
+    <string name="tipImage">click to get tip</string>
+
 
 </resources>

@@ -9,6 +9,7 @@ import android.os.Build;
 import android.preference.PreferenceManager;
 import android.view.View;
 import android.widget.ImageButton;
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.Locale;
 
@@ -18,22 +19,22 @@ public class LocaleHelper {
 
     public static Languages currentLang;
     private static Languages defaultLang = Languages.ii;
-    public static MainActivity context;
-    private static ImageButton langBt;
+    public AppCompatActivity context;
+    private ImageButton langBt;
 
-    public static void changeLocale() {
+    public void changeLocale() {
         if(currentLang==Languages.ru)
             setLocale(Languages.ii);
         else setLocale(Languages.ru);
     }
 
-    public static void setLanguageBt(ImageButton languageBt){
-        context = MainActivity.mainActivity;
+    public LocaleHelper(ImageButton languageBt,AppCompatActivity activity){
+        context = activity;
         langBt = languageBt;
-        langBt.setOnClickListener(context);
+        langBt.setOnClickListener((View.OnClickListener) context);
     }
 
-    public static void setLocale(Languages newLang) {
+    public void setLocale(Languages newLang) {
         SetImageBt();
         if(currentLang == newLang && newLang != null) return;
 
@@ -54,7 +55,7 @@ public class LocaleHelper {
         context.recreate();
     }
 
-    public static void SetImageBt(){
+    public void SetImageBt(){
         if(currentLang == null) return;
         switch (currentLang) {
             case ii:

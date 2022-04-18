@@ -12,4 +12,7 @@
     <string name="LevelName_2">二</string>
     <string name="LevelName_3">三</string>
     <string name="LevelName_4">四</string>
+    <string name="HintText">翻译</string>
+    <string name="BtCheckAnswerText">查看</string>
+    <string name="tipImage">(得到提示)</string>
 </resources>

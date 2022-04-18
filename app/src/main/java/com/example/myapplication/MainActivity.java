@@ -1,13 +1,9 @@
 package com.example.myapplication;
 
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -19,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public static MainActivity mainActivity ;
     private ActivityMainBinding binding;
+    private LocaleHelper localeHelper;
 
     {
         mainActivity = this;
@@ -56,8 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void setLanguage(){
-        LocaleHelper.setLanguageBt(findViewById(R.id.languageBt));
-        LocaleHelper.setLocale(LocaleHelper.currentLang);
+        localeHelper= new LocaleHelper(findViewById(R.id.languageBt),this);
+        localeHelper.setLocale(LocaleHelper.currentLang);
     }
 
     private void setConfig(){
@@ -72,11 +69,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.languageBt: LocaleHelper.changeLocale(); break;
-            case R.id.levelBt_121:
-                Intent intent = new Intent(this, LearningTests.class);
-                startActivity(intent);
-            break;
+            case R.id.languageBt:
+                localeHelper.changeLocale(); break;
+
+            case R.id.levelBt_1:
+                setLevelToLearn(R.string.LevelName_1);
+                break;
+            case R.id.levelBt_2:
+                setLevelToLearn(R.string.LevelName_2);
+                break;
+            case R.id.levelBt_3:
+                setLevelToLearn(R.string.LevelName_3);
+                break;
         }
+    }
+    private void setLevelToLearn(int level){
+        LearningTests.currentLevel = level;
+        Intent intent = new Intent(this, LearningTests.class);
+        startActivity(intent);
     }
 }

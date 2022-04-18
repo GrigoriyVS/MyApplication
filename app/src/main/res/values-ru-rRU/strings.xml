@@ -12,4 +12,7 @@
     <string name="LevelName_2">Второй</string>
     <string name="LevelName_3">Третий</string>
     <string name="LevelName_4">Четвертый</string>
+    <string name="HintText">Перевод</string>
+    <string name="BtCheckAnswerText">Проверить</string>
+    <string name="tipImage">(получить подсказку)</string>
 </resources>
