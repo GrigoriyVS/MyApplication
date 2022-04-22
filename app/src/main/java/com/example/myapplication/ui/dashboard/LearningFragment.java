@@ -8,10 +8,9 @@ import android.widget.ImageButton;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import com.example.myapplication.MainActivity;
-import com.example.myapplication.R;
 import com.example.myapplication.databinding.FragmentLearningBinding;
 
-public class DashboardFragment extends Fragment {
+public class LearningFragment extends Fragment {
 
     private FragmentLearningBinding binding;
 

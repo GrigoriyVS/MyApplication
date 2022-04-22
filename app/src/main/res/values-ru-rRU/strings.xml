@@ -15,4 +15,5 @@
     <string name="HintText">Перевод</string>
     <string name="BtCheckAnswerText">Проверить</string>
     <string name="tipImage">(получить подсказку)</string>
+    <string name="AuthText">Авторизация</string>
 </resources>

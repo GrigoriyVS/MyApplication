@@ -81,11 +81,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.levelBt_3:
                 setLevelToLearn(R.string.LevelName_3);
                 break;
+
+            case R.id.AuthBt:
+                setAuthActivity();
+                break;
         }
     }
     private void setLevelToLearn(int level){
         LearningTests.currentLevel = level;
         Intent intent = new Intent(this, LearningTests.class);
+        startActivity(intent);
+    }
+    private void setAuthActivity(){
+        Intent intent = new Intent(this, AuthUser.class);
         startActivity(intent);
     }
 }

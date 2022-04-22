@@ -15,6 +15,7 @@
     <string name="HintText">Hint</string>
     <string name="BtCheckAnswerText">Check answer</string>
     <string name="tipImage">click to get tip</string>
+    <string name="AuthText">Auth</string>
 
 
 </resources>
