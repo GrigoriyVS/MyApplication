@@ -16,4 +16,6 @@
     <string name="BtCheckAnswerText">Проверить</string>
     <string name="tipImage">(получить подсказку)</string>
     <string name="AuthText">Авторизация</string>
+    <string name="AuthName_text">Имя</string>
+    <string name="AuthDefaultLanguage_text">Язык по умолчанию</string>
 </resources>

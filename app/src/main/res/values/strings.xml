@@ -16,6 +16,8 @@
     <string name="BtCheckAnswerText">Check answer</string>
     <string name="tipImage">click to get tip</string>
     <string name="AuthText">Auth</string>
+    <string name="AuthName_text">name</string>
+    <string name="AuthDefaultLanguage_text">DefaultLanguage</string>
 
 
 </resources>

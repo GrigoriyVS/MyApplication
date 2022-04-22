@@ -16,4 +16,6 @@
     <string name="BtCheckAnswerText">查看</string>
     <string name="tipImage">(得到提示)</string>
     <string name="AuthText">授权</string>
+    <string name="AuthName_text">姓名</string>
+    <string name="AuthDefaultLanguage_text">默认语言</string>
 </resources>
