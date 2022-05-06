@@ -5,9 +5,9 @@
     <string name="title_dashboard">别的东西</string>
     <string name="title_notifications">进步</string>
 
-    <string name="user_title">进步</string>
+    <string name="profile_title">进步</string>
     <string name="learning_title">进</string>
-    <string name="courses_title">进进</string>
+    <string name="settings_title">进进</string>
     <string name="LevelName_1">一</string>
     <string name="LevelName_2">二</string>
     <string name="LevelName_3">三</string>

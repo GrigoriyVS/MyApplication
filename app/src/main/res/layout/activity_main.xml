@@ -34,7 +34,7 @@
             app:layout_constraintBottom_toBottomOf="parent"/>
     <ImageButton
             android:layout_width="50dp"
-            android:layout_height="50dp" android:id="@+id/languageBt"
+            android:layout_height="50dp" android:id="@+id/languageBt3"
             android:scaleType="fitCenter"
             android:background="@null"
             android:soundEffectsEnabled="false"

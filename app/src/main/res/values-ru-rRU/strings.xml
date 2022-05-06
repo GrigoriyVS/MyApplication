@@ -5,9 +5,9 @@
     <string name="title_dashboard">Обучение</string>
     <string name="title_notifications">Прогресс</string>
 
-    <string name="user_title">Пользователь</string>
+    <string name="profile_title">Профиль</string>
     <string name="learning_title">Обучение</string>
-    <string name="courses_title">Курсы</string>
+    <string name="settings_title">Настройки</string>
     <string name="LevelName_1">Первый</string>
     <string name="LevelName_2">Второй</string>
     <string name="LevelName_3">Третий</string>

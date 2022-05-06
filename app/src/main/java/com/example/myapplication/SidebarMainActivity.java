@@ -2,48 +2,58 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.WindowManager;
-import androidx.appcompat.app.AppCompatActivity;
+import com.google.android.material.navigation.NavigationView;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import com.example.myapplication.databinding.ActivityMainBinding;
-import android.view.View;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.AppCompatActivity;
+import com.example.myapplication.databinding.ActivitySidebarMainBinding;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class SidebarMainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    public static MainActivity mainActivity ;
-    private ActivityMainBinding binding;
+    private AppBarConfiguration mAppBarConfiguration;
+    private ActivitySidebarMainBinding binding;
     private LocaleHelper localeHelper;
-
-    {
-        mainActivity = this;
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
+
+        binding = ActivitySidebarMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        System.out.println("Loading...");
-        //binding.getRoot().findViewById(R.id.levelBt_1);
+
         setFullScreen(this);
         setLanguage();
 
-        //ImageButton bt = findViewById(R.id.levelBt_1);
-        //bt.setOnClickListener(this);
-        //TODO some
+        setSupportActionBar(binding.appBarSidebarMain.toolbar);
+        DrawerLayout drawer = binding.drawerLayout;
+        NavigationView navigationView = binding.navView;
+        navigationView.setItemIconTintList(null);
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        mAppBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                .setOpenableLayout(drawer)
+                .build();
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_sidebar_main);
+        NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
+        NavigationUI.setupWithNavController(navigationView, navController);
+    }
 
-        //startActivity(this, new Intent(this, LearningTests.class));
-        setConfig();
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_sidebar_main);
+        return NavigationUI.navigateUp(navController, mAppBarConfiguration)
+                || super.onSupportNavigateUp();
     }
 
     public static void setFullScreen(AppCompatActivity act){
-        act.getSupportActionBar().hide();
-
         WindowManager.LayoutParams attrs = act.getWindow().getAttributes();
         attrs.flags = WindowManager.LayoutParams.FLAG_FULLSCREEN;
         act.getWindow().setAttributes(attrs);
@@ -54,23 +64,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void setLanguage(){
-        localeHelper= new LocaleHelper(findViewById(R.id.languageBt3),this);
+        localeHelper= new LocaleHelper(findViewById(R.id.languageBt),this);
         localeHelper.setLocale(LocaleHelper.currentLang);
     }
-
-    private void setConfig(){
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_courses, R.id.navigation_learning, R.id.navigation_user)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(binding.navView, navController);
-    }
-
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.languageBt3:
+            case R.id.languageBt:
                 localeHelper.changeLocale(); break;
 
             case R.id.levelBt_1:

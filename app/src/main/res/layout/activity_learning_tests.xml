@@ -18,7 +18,7 @@
             android:singleLine="false"
             android:layout_marginTop="-15dp" android:layout_marginStart="70dp" android:layout_marginEnd="70dp"/>
     <TextView
-            android:text="@string/courses_title"
+            android:text="@string/settings_title"
             android:layout_width="match_parent"
             android:layout_height="32dp" android:id="@+id/level_name"
             android:fontFamily="casual" android:textSize="20sp"
