@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
+import com.example.myapplication.ui.login.LoginActivity;
 import com.google.android.material.navigation.NavigationView;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -29,6 +30,9 @@ public class SidebarMainActivity extends AppCompatActivity implements View.OnCli
 
         setFullScreen(this);
         setLanguage();
+        if(!User.isAuthorized){
+            setAuthActivity();
+        }
 
         setSupportActionBar(binding.appBarSidebarMain.toolbar);
         DrawerLayout drawer = binding.drawerLayout;
@@ -94,7 +98,7 @@ public class SidebarMainActivity extends AppCompatActivity implements View.OnCli
         startActivity(intent);
     }
     private void setAuthActivity(){
-        Intent intent = new Intent(this, AuthUser.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 }

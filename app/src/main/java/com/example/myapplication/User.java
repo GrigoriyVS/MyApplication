@@ -25,6 +25,7 @@ public class User {
     private String fileName = File.separator+"user.json";
     private String name;
     private String language;
+    public static boolean isAuthorized = false;
 
     public User()  {
 
@@ -88,4 +89,5 @@ public class User {
         name= "Гриша";
         language="ii";
     }
+
 }

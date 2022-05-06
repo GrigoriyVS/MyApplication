@@ -5,6 +5,7 @@
       <map>
         <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.14298245614035088" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.14298245614035088" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.17219927247823727" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19384057971014493" />
         <entry key="app/src/main/res/layout/activity_sidebar_main.xml" value="0.12125107112253641" />
         <entry key="app/src/main/res/layout/app_bar_sidebar_main.xml" value="0.22496408266170467" />
