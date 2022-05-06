@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
+        System.out.println("Loading...");
         //binding.getRoot().findViewById(R.id.levelBt_1);
         setFullScreen(this);
         setLanguage();
