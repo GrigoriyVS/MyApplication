@@ -16,7 +16,7 @@
 
         <ImageButton
                 android:layout_width="60dp"
-                android:layout_height="60dp" android:id="@+id/languageBt"
+                android:layout_height="60dp" android:id="@+id/languageBt_main"
                 android:scaleType="fitCenter"
                 android:background="#003C5CFB"
                 android:soundEffectsEnabled="false"

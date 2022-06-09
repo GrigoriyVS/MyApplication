@@ -1,76 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.dashboard.LearningFragment">
-
-    <ScrollView
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".Learning">
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content" android:layout_gravity="center_vertical">
 
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            android:id="@+id/scrollView2">
+        <ImageView
+                android:src="@drawable/tip"
+                android:layout_width="15dp"
+                android:layout_height="15dp" android:id="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="@+id/textView"
+                app:layout_constraintBottom_toBottomOf="@+id/textView"/>
+        <Button
+                android:layout_width="119dp"
+                android:layout_height="67dp" android:id="@+id/checkAnswer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/inputWord"
+                app:layout_constraintStart_toEndOf="@+id/inputWord"
+                app:layout_constraintTop_toTopOf="@+id/inputWord"
+                app:layout_constraintHorizontal_bias="0.49" android:text="@string/BtCheckAnswerText"
+                android:backgroundTint="#83B0E8"
+                android:textSize="12sp"/>
+        <Button
+                android:layout_width="376dp"
+                android:layout_height="72dp" android:id="@+id/completeBt"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/CompleteText"
+                android:textSize="12sp"
+                app:layout_constraintTop_toBottomOf="@+id/inputWord"
+                app:layout_constraintStart_toStartOf="parent" android:backgroundTint="#ACF8C1"
+                android:textColor="#000000" android:layout_marginTop="20dp" tools:visibility="visible"/>
+        <TextView
+                android:text="Здравствуйте"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/WordTextRu"
+                app:layout_constraintBottom_toTopOf="@+id/imageTip" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.498"
+                android:fontFamily="serif"
+                android:textSize="24sp" android:textColor="#000000" android:textAlignment="center"
+                android:layout_marginBottom="5dp" app:layout_constraintTop_toBottomOf="@+id/partText"
+                android:layout_marginTop="20dp"/>
+        <TextView
+                android:text="Здравствуйте"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/WordTextii"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.498"
+                android:fontFamily="serif"
+                android:textSize="24sp" android:textColor="#000000" android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                android:layout_marginTop="20dp"/>
+        <TextView
+                android:text="Здравствуйте"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/levelText"
+                app:layout_constraintStart_toStartOf="parent"
+                android:fontFamily="serif"
+                android:textSize="20sp" android:textColor="#000000" android:textAlignment="center"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginStart="10dp"/>
+        <TextView
+                android:text="Здравствуйте"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/partText"
+                app:layout_constraintStart_toStartOf="@+id/levelText"
+                android:fontFamily="serif"
+                android:textSize="16sp" android:textColor="#000000" android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@+id/levelText"/>
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView8"
+                android:fontFamily="serif"
+                android:textSize="16sp" android:textColor="#80000000" android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@+id/imageTip"
+                app:layout_constraintStart_toStartOf="@+id/imageTip"
+                app:layout_constraintEnd_toEndOf="@+id/imageTip" android:text="@string/tipImage"/>
+        <TextView
+                android:text="@string/HintText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView6"
+                app:layout_constraintStart_toStartOf="@+id/inputWord"
+                android:fontFamily="serif"
+                android:textSize="24sp" android:textColor="#000000" android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@+id/WordTextii" android:layout_marginTop="5dp"/>
 
-        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:orientation="vertical"
-                      android:fillViewport="true" android:gravity="center">
-            <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="77dp"/>
-            <ImageButton
-                    android:layout_width="100dp"
-                    android:layout_height="100dp" android:id="@+id/levelBt_1"
-                    android:scaleType="fitCenter"
-                    android:background="@drawable/level_1"
-                    android:soundEffectsEnabled="false"
-                    tools:ignore="SpeakableTextPresentCheck"
-                    android:layout_marginEnd="@null"
-                    android:layout_gravity="center"/>
-            <TextView
-                    android:text="@string/LevelName_1"
-                    android:layout_width="match_parent"
-                    android:layout_height="59dp" android:id="@+id/level1_name"
-                    android:fontFamily="casual" android:textSize="20sp"
-                    android:textColor="@color/black" android:textAlignment="center" android:textStyle="bold"
-            />
-            <ImageButton
-                    android:layout_width="100dp"
-                    android:layout_height="100dp" android:id="@+id/levelBt_2"
-                    android:scaleType="fitCenter"
-                    android:background="@drawable/level_2"
-                    android:soundEffectsEnabled="false"
-                    tools:ignore="SpeakableTextPresentCheck"
-                    android:layout_marginEnd="@null"
-                    android:layout_gravity="center"/>
-            <TextView
-                    android:text="@string/LevelName_2"
-                    android:layout_width="match_parent"
-                    android:layout_height="66dp" android:id="@+id/level2_name"
-                    android:fontFamily="casual" android:textSize="20sp"
-                    android:textColor="@color/black" android:textAlignment="center" android:textStyle="bold"
-            />
-            <ImageButton
-                    android:layout_width="100dp"
-                    android:layout_height="100dp" android:id="@+id/levelBt_3"
-                    android:scaleType="fitCenter"
-                    android:background="@drawable/level_3"
-                    android:soundEffectsEnabled="false"
-                    tools:ignore="SpeakableTextPresentCheck"
-                    android:layout_marginEnd="@null"
-                    android:layout_gravity="center"/>
-            <TextView
-                    android:text="@string/LevelName_3"
-                    android:layout_width="match_parent"
-                    android:layout_height="77dp" android:id="@+id/level3_name"
-                    android:fontFamily="casual" android:textSize="20sp"
-                    android:textColor="@color/black" android:textAlignment="center" android:textStyle="bold"
-            />
 
-        </LinearLayout>
-    </ScrollView>
+        <pl.droidsonroids.gif.GifImageView
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:src="@drawable/question"
+                android:layout_gravity="center_horizontal|center_vertical" android:scaleType="centerCrop"
+                app:layout_constraintTop_toTopOf="@+id/imageTip"
+                app:layout_constraintBottom_toBottomOf="@+id/imageTip"
+                app:layout_constraintStart_toStartOf="@+id/imageTip" app:layout_constraintEnd_toEndOf="@+id/imageTip"
+                android:id="@+id/gifTipImage"/>
+        <ImageView
+                android:layout_width="240dp"
+                android:layout_height="240dp"
+                android:id="@+id/imageTip"
+                app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintVertical_bias="0.32999998" android:visibility="visible"/>
+        <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="251dp"
+                android:layout_height="78dp"
+                android:id="@+id/inputWord"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="15dp"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="@null" android:fontFamily="serif" android:textSize="20sp" android:id="@+id/inputEditeRu"/>
+        </com.google.android.material.textfield.TextInputLayout>
+        <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp" app:srcCompat="@drawable/listen"
+                android:id="@+id/listenBt"
+                app:layout_constraintStart_toEndOf="@+id/WordTextRu"
+                app:layout_constraintTop_toTopOf="@+id/WordTextRu" android:backgroundTint="#00BC4D4D"
+                android:background="#1E0A0A" app:layout_constraintBottom_toBottomOf="@+id/WordTextRu"
+                tools:visibility="visible"/>
+        <TextView
+                android:text="-10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView"
+                app:layout_constraintStart_toEndOf="@+id/textView8"
+                app:layout_constraintBottom_toBottomOf="@+id/textView8" android:layout_marginStart="15dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

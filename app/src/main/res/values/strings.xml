@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">En</string>
+    <string name="app_name">Learn Chinese</string>
     <string name="title_home">En</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-
     <string name="profile_title">Profile</string>
     <string name="learning_title">Learning</string>
     <string name="settings_title">Settings</string>
-    <string name="LevelName_1">Level1</string>
+    <string name="LevelName_1">1</string>
     <string name="LevelName_2">2</string>
     <string name="LevelName_3">3</string>
     <string name="LevelName_4">4</string>
@@ -18,6 +17,41 @@
     <string name="AuthText">Auth</string>
     <string name="AuthName_text">name</string>
     <string name="AuthDefaultLanguage_text">DefaultLanguage</string>
+    <string name="AuthPhone">Phone number</string>
+    <string name="AuthLicense">Пользовательское согласшение</string>
+    <string name="levelsText">Levels</string>
+    <string name="parts_text">parts</string>
+    <string name="part_consonants">consonants</string>
+    <string name="part_vowels">vowels</string>
+    <string name="part_num">numbers</string>
+    <string name="TranslaterText">Translater</string>
+    <string name="listenText">listen</string>
+    <string name="CompleteText">next</string>
+    <string name="changeImage">change</string>
+    <string name="SignOut">SingOut</string>
+    <string name="progress">progress</string>
+    <string name="perks">perks</string>
+    <string name="applay">applay</string>
+    <string name="CompleteWin">Win</string>
+    <string name="l2_part_wordPart">wordPart</string>
+    <string name="l2_part_wordPart2">wordPart2</string>
+    <string name="l2_part_wordPart3">wordPart3</string>
+    <string name="l3_words1">words1</string>
+    <string name="l3_words2">words2</string>
+    <string name="l3_words3">words3</string>
+    <string name="l4_combinWords1">combinWords1</string>
+    <string name="l4_combinWords2">combinWords2</string>
+    <string name="l4_combinWords3">combinWords3</string>
+
+
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="title_activity_sidebar_main">SidebarMainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -25,11 +59,9 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in or register</string>
@@ -39,6 +71,5 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="title_activity_login">LoginActivity</string>
-
-
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

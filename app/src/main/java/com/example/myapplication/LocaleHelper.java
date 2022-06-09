@@ -18,12 +18,11 @@ public class LocaleHelper {
     enum Languages{ii,ru}
 
     public static Languages currentLang;
-    private static Languages defaultLang = Languages.ii;
     public AppCompatActivity context;
     private ImageButton langBt;
 
     public void changeLocale() {
-        if(currentLang==Languages.ru)
+         if(currentLang==Languages.ru)
             setLocale(Languages.ii);
         else setLocale(Languages.ru);
     }
@@ -41,10 +40,13 @@ public class LocaleHelper {
         Locale locale;
         if(currentLang==null){
             if(newLang==null){
-                locale = new Locale(defaultLang.name());
+                locale = new Locale(User.getLanguage());
             }
             else locale = new Locale(currentLang.name());
         }else locale = new Locale(newLang.name());
+        updateCurrentLang(locale);
+    }
+    private void updateCurrentLang(Locale locale){
         currentLang = Languages.valueOf(locale.getLanguage());
         Locale.setDefault(locale);
 
@@ -54,6 +56,22 @@ public class LocaleHelper {
         context.getResources().updateConfiguration(config, context.getResources().getDisplayMetrics());
         context.recreate();
     }
+
+    public static void updateLocale() {
+        if(currentLang == null) return;
+
+        Locale locale = new Locale(currentLang.name());
+        currentLang = Languages.valueOf(locale.getLanguage());
+        Locale.setDefault(locale);
+
+        AppCompatActivity context = SidebarMainActivity.mainActivity;
+        Configuration config = context.getResources().getConfiguration();
+        config.setLocale(locale);
+        context.createConfigurationContext(config);
+        context.getResources().updateConfiguration(config, context.getResources().getDisplayMetrics());
+        context.recreate();
+    }
+
 
     public void SetImageBt(){
         if(currentLang == null) return;

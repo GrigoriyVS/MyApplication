@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context=".Parts">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp" tools:src="@null" android:id="@+id/part1Bt"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/part2Bt"
+                android:layout_marginStart="16dp" app:layout_constraintHorizontal_bias="0.0"
+                app:srcCompat="@drawable/courses" app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="150dp"/>
+        <TextView
+                android:text="@string/part_consonants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/part1_text"
+                app:layout_constraintStart_toStartOf="@+id/part1Bt"
+                app:layout_constraintEnd_toEndOf="@+id/part1Bt"
+                app:layout_constraintTop_toBottomOf="@+id/part1Bt"
+                android:textSize="20sp" android:textColor="#000000" android:fontFamily="serif"
+        />
+        <pl.droidsonroids.gif.GifImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/complete"
+                android:layout_gravity="center_horizontal|center_vertical" android:scaleType="centerCrop"
+                android:id="@+id/gifComplete1"
+                app:layout_constraintStart_toEndOf="@+id/part1_text"
+                app:layout_constraintTop_toBottomOf="@+id/part1Bt"/>
+        <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp" android:id="@+id/part2Bt"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="12dp" app:layout_constraintTop_toTopOf="@+id/part1Bt"
+                app:srcCompat="@drawable/courses"/>
+        <TextView
+                android:text="@string/part_vowels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/part2_text"
+                app:layout_constraintStart_toStartOf="@+id/part2Bt" app:layout_constraintEnd_toEndOf="@+id/part2Bt"
+                app:layout_constraintTop_toBottomOf="@+id/part2Bt"
+                android:textSize="20sp" android:textColor="#000000" android:fontFamily="serif"
+        />
+        <pl.droidsonroids.gif.GifImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/complete"
+                android:layout_gravity="center_horizontal|center_vertical" android:scaleType="centerCrop"
+                android:id="@+id/gifComplete2"
+                app:layout_constraintStart_toEndOf="@+id/part2_text"
+                app:layout_constraintTop_toBottomOf="@+id/part2Bt"/>
+        <ImageView
+                android:layout_width="160dp"
+                android:layout_height="160dp" android:id="@+id/part3Bt"
+                app:layout_constraintStart_toStartOf="@+id/part1Bt"
+                app:layout_constraintEnd_toEndOf="@+id/part2Bt"
+                app:layout_constraintTop_toBottomOf="@+id/part1_text"
+                android:layout_marginTop="30dp" app:srcCompat="@drawable/courses"/>
+        <TextView
+                android:text="@string/part_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/part3_text"
+                app:layout_constraintEnd_toEndOf="@+id/part3Bt"
+                app:layout_constraintTop_toBottomOf="@+id/part3Bt"
+                android:textSize="20sp" android:textColor="#000000" android:fontFamily="serif"
+                app:layout_constraintStart_toStartOf="@+id/part3Bt"/>
+        <pl.droidsonroids.gif.GifImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/complete"
+                android:layout_gravity="center_horizontal|center_vertical" android:scaleType="centerCrop"
+                android:id="@+id/gifComplete3"
+                app:layout_constraintStart_toEndOf="@+id/part3_text"
+                app:layout_constraintTop_toBottomOf="@+id/part3Bt"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

@@ -3,23 +3,61 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             xmlns:tools="http://schemas.android.com/tools"
             android:id="@+id/mobile_navigation2"
-            app:startDestination="@+id/nav_home">
+            app:startDestination="@id/signIn">
 
     <fragment
-            android:id="@+id/nav_home"
-            android:name="com.example.myapplication.ui.dashboard.LearningFragment"
+            android:id="@+id/levels"
+            android:name="com.example.myapplication.ui.levels.Levels"
             android:label="@string/learning_title"
-            tools:layout="@layout/fragment_learning"/>
+            tools:layout="@layout/fragment_learning_levels">
+        <action android:id="@+id/action_levels_to_parts" app:destination="@id/parts"/>
+    </fragment>
 
     <fragment
-            android:id="@+id/nav_gallery"
-            android:name="com.example.myapplication.ui.notifications.UserFragment"
+            android:id="@+id/user"
+            android:name="com.example.myapplication.ui.user.UserFragment"
             android:label="@string/profile_title"
-            tools:layout="@layout/fragment_user"/>
+            tools:layout="@layout/fragment_user">
+        <action android:id="@+id/action_user_to_signIn" app:destination="@id/signIn"/>
+    </fragment>
 
     <fragment
-            android:id="@+id/nav_slideshow"
-            android:name="com.example.myapplication.ui.home.CoursesFragment"
-            android:label="@string/settings_title"
-            tools:layout="@layout/fragment_courses"/>
+            android:id="@+id/translator"
+            android:name="com.example.myapplication.ui.Translator.TranslatorFragment"
+            android:label="@string/TranslaterText"
+            tools:layout="@layout/fragment_translator"/>
+    <fragment
+            android:id="@+id/listen"
+            android:name="com.example.myapplication.ui.listen.ListenFragment"
+            android:label="@string/listenText"
+            tools:layout="@layout/fragment_listen"/>
+    <fragment
+            android:id="@+id/parts"
+            android:name="com.example.myapplication.Parts"
+            android:label="@string/parts_text"
+            tools:layout="@layout/fragment_parts">
+        <action android:id="@+id/action_parts_to_learning" app:destination="@id/learning"/>
+    </fragment>
+    <fragment
+            android:id="@+id/learning"
+            android:name="com.example.myapplication.Learning"
+            android:label="@string/learning_title"
+            tools:layout="@layout/fragment_learning">
+        <action android:id="@+id/action_learning_to_listen" app:destination="@id/listen"/>
+        <action android:id="@+id/action_learning_to_complete" app:destination="@id/complete"/>
+    </fragment>
+    <fragment
+            android:id="@+id/complete"
+            android:name="com.example.myapplication.CompletePart"
+            android:label="@string/listenText"
+            tools:layout="@layout/comlete_part">
+        <action android:id="@+id/action_complete_to_levels" app:destination="@id/levels"/>
+    </fragment>
+    <fragment
+            android:id="@+id/signIn"
+            android:name="com.example.myapplication.SignIn"
+            android:label="@string/profile_title"
+            tools:layout="@layout/sign_in">
+        <action android:id="@+id/action_signIn_to_levels" app:destination="@id/levels"/>
+    </fragment>
 </navigation>

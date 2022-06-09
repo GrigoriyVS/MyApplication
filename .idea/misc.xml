@@ -5,17 +5,28 @@
       <map>
         <entry key="app/src/main/res/drawable/ic_menu_camera.xml" value="0.14298245614035088" />
         <entry key="app/src/main/res/drawable/side_nav_bar.xml" value="0.14298245614035088" />
+        <entry key="app/src/main/res/layout/activity_auth_user.xml" value="0.24502164502164503" />
+        <entry key="app/src/main/res/layout/activity_learning_tests.xml" value="0.2972194767157268" />
+        <entry key="app/src/main/res/layout/activity_level_parts.xml" value="0.25757575757575757" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.17219927247823727" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19384057971014493" />
-        <entry key="app/src/main/res/layout/activity_sidebar_main.xml" value="0.12125107112253641" />
+        <entry key="app/src/main/res/layout/activity_sidebar_main.xml" value="0.22855386288154242" />
         <entry key="app/src/main/res/layout/app_bar_sidebar_main.xml" value="0.22496408266170467" />
-        <entry key="app/src/main/res/layout/content_sidebar_main.xml" value="0.12125107112253641" />
+        <entry key="app/src/main/res/layout/comlete_part.xml" value="0.24536679923177612" />
+        <entry key="app/src/main/res/layout/content_sidebar_main.xml" value="0.2168506933489502" />
         <entry key="app/src/main/res/layout/fragment_courses.xml" value="0.12938596491228072" />
-        <entry key="app/src/main/res/layout/fragment_learning.xml" value="0.12938596491228072" />
+        <entry key="app/src/main/res/layout/fragment_learning.xml" value="0.22375690607734808" />
+        <entry key="app/src/main/res/layout/fragment_learning_levels.xml" value="0.2454600625216367" />
+        <entry key="app/src/main/res/layout/fragment_level1_parts.xml" value="0.14210526315789473" />
+        <entry key="app/src/main/res/layout/fragment_listen.xml" value="0.10145239563990206" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.2779731811572889" />
+        <entry key="app/src/main/res/layout/fragment_parts.xml" value="0.23425925925925925" />
+        <entry key="app/src/main/res/layout/fragment_settings.xml" value="0.23425925925925925" />
         <entry key="app/src/main/res/layout/fragment_slideshow.xml" value="0.12125107112253641" />
-        <entry key="app/src/main/res/layout/fragment_user.xml" value="0.12938596491228072" />
-        <entry key="app/src/main/res/layout/nav_header_sidebar_main.xml" value="0.12125107112253641" />
+        <entry key="app/src/main/res/layout/fragment_translator.xml" value="0.12727478300225067" />
+        <entry key="app/src/main/res/layout/fragment_user.xml" value="0.23550623829402625" />
+        <entry key="app/src/main/res/layout/nav_header_sidebar_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/sign_in.xml" value="0.15482456140350878" />
         <entry key="app/src/main/res/menu/activity_main_drawer.xml" value="0.2571428571428571" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.24502164502164503" />
         <entry key="app/src/main/res/menu/sidebar_main.xml" value="0.2571428571428571" />

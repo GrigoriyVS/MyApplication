@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Имя</string>
+    <string name="app_name">Учим Китайский</string>
     <string name="title_home">Русский</string>
     <string name="title_dashboard">Обучение</string>
     <string name="title_notifications">Прогресс</string>
@@ -8,14 +8,39 @@
     <string name="profile_title">Профиль</string>
     <string name="learning_title">Обучение</string>
     <string name="settings_title">Настройки</string>
-    <string name="LevelName_1">Первый</string>
-    <string name="LevelName_2">Второй</string>
-    <string name="LevelName_3">Третий</string>
-    <string name="LevelName_4">Четвертый</string>
+    <string name="LevelName_1">Буквы и цифры</string>
+    <string name="LevelName_2">Слоги</string>
+    <string name="LevelName_3">Слова</string>
+    <string name="LevelName_4">Предложения</string>
     <string name="HintText">Перевод</string>
     <string name="BtCheckAnswerText">Проверить</string>
     <string name="tipImage">(получить подсказку)</string>
     <string name="AuthText">Авторизация</string>
     <string name="AuthName_text">Имя</string>
     <string name="AuthDefaultLanguage_text">Язык по умолчанию</string>
+    <string name="AuthLicense">Я принимаю пользовательское соглашение</string>
+    <string name="AuthPhone">Номер телефона</string>
+    <string name="levelsText">Уровни</string>
+    <string name="parts_text">Главы</string>
+    <string name="part_consonants">Согласные</string>
+    <string name="part_vowels">Гласные</string>
+    <string name="part_num">Цифры</string>
+    <string name="TranslaterText">Переводчик</string>
+    <string name="listenText">Послушать</string>
+    <string name="CompleteText">Продолжить</string>
+    <string name="changeImage">Изменить</string>
+    <string name="SignOut">Выход</string>
+    <string name="progress">Прогресс:</string>
+    <string name="perks">Навыки:</string>
+    <string name="applay">Применить</string>
+    <string name="CompleteWin">Глава завершена!</string>
+    <string name="l2_part_wordPart">Слоги</string>
+    <string name="l2_part_wordPart2">Два слога</string>
+    <string name="l2_part_wordPart3">Три слога</string>
+    <string name="l3_words1">Природа</string>
+    <string name="l3_words2">Цифры</string>
+    <string name="l3_words3">Семья</string>
+    <string name="l4_combinWords1">Природа 2</string>
+    <string name="l4_combinWords3">Семья 3</string>
+    <string name="l4_combinWords2">Семья 2</string>
 </resources>

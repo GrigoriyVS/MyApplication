@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">姓名</string>
+    <string name="app_name">" 学习中文"</string>
     <string name="title_home">描述</string>
     <string name="title_dashboard">别的东西</string>
     <string name="title_notifications">进步</string>
@@ -8,14 +8,39 @@
     <string name="profile_title">进步</string>
     <string name="learning_title">进</string>
     <string name="settings_title">进进</string>
-    <string name="LevelName_1">一</string>
-    <string name="LevelName_2">二</string>
-    <string name="LevelName_3">三</string>
-    <string name="LevelName_4">四</string>
+    <string name="LevelName_1">字母和数字</string>
+    <string name="LevelName_2">音节</string>
+    <string name="LevelName_3">话</string>
+    <string name="LevelName_4">优惠</string>
     <string name="HintText">翻译</string>
     <string name="BtCheckAnswerText">查看</string>
     <string name="tipImage">(得到提示)</string>
     <string name="AuthText">授权</string>
     <string name="AuthName_text">姓名</string>
     <string name="AuthDefaultLanguage_text">默认语言</string>
+    <string name="AuthLicense">" 我接受用户协议"</string>
+    <string name="AuthPhone">电话号码</string>
+    <string name="levelsText">关卡</string>
+    <string name="parts_text">章节</string>
+    <string name="part_consonants">辅音</string>
+    <string name="part_vowels">元音</string>
+    <string name="part_num">数字</string>
+    <string name="TranslaterText">口译员</string>
+    <string name="listenText">听</string>
+    <string name="CompleteText">继续</string>
+    <string name="changeImage">改变</string>
+    <string name="SignOut">输出</string>
+    <string name="progress">进步:</string>
+    <string name="perks">技能:</string>
+    <string name="applay">申请</string>
+    <string name="CompleteWin">章节完成！</string>
+    <string name="l2_part_wordPart">音节</string>
+    <string name="l2_part_wordPart2">两个音节</string>
+    <string name="l2_part_wordPart3">三个音节</string>
+    <string name="l3_words1">自然</string>
+    <string name="l3_words2">数字</string>
+    <string name="l3_words3">家庭</string>
+    <string name="l4_combinWords2">家庭 2</string>
+    <string name="l4_combinWords3">家庭 3</string>
+    <string name="l4_combinWords1">自然 2</string>
 </resources>
